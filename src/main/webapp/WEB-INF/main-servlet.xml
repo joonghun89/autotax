@@ -43,5 +43,10 @@
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate"> 
 			<constructor-arg index="0" ref="sqlSession"/> 
 	</bean>     
+	
+    <context:component-scan base-package="com.hanul.autotax" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
+    </context:component-scan>	
     	
 </beans>
