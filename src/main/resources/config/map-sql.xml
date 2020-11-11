@@ -4,11 +4,14 @@
 <mapper namespace="com.hanul.autotax.dao">
 
 	<select id="getAllCustomer" resultType="hashMap">
-		SELECT * from customers
+		SELECT aaaa from customers
 	</select>
 		
 	<select id="getCustomerById" resultType="hashMap">
 		SELECT * from customers where id=#{id}
 	</select>	
 
+	<update id="updateTest">
+		update cases set personName='김철수' where id='39'		
+	</update>
 </mapper>

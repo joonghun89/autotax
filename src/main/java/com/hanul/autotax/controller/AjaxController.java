@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.hanul.autotax.common.ErrorJsonMessage;
 import com.hanul.autotax.dao.CommonDao;
 
 @RestController
@@ -26,7 +27,7 @@ public class AjaxController {
 	@RequestMapping(value="getAllCustomer", method=RequestMethod.GET, produces = "application/json; charset=UTF-8")
 	String getCustomerInfo() {
 		String json = null;
-		logger.debug("pgetCustomerInfo call...");
+		logger.debug("getAllCustomer call...");
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
 									
@@ -35,6 +36,8 @@ public class AjaxController {
 			
 		}catch(Exception e) {
 			e.printStackTrace();
+			json = new ErrorJsonMessage("A500","고객 정보 조회시 오류").toJson();	
+			logger.debug(json);
 		}
 	
 		return json;		
