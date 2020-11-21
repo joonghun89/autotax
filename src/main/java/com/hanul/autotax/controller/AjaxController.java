@@ -23,6 +23,7 @@ public class AjaxController {
 	
 	@Autowired
 	private CommonDao commonDao;
+		
 	
 	@RequestMapping(value="getAllCustomer", method=RequestMethod.GET, produces = "application/json; charset=UTF-8")
 	String getCustomerInfo() {
