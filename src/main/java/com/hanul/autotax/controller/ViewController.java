@@ -29,6 +29,105 @@ public class ViewController {
 	}	
 	
 	@RequestMapping(value="/caseList")
+	String caseList() throws Exception{	
+		return "caseList";		
+	}	
+	
+	@RequestMapping(value="/caseView")
+	String caseView() throws Exception{	
+		return "caseView";		
+	}		
+	
+	@RequestMapping(value="/caseModify")
+	String caseModify() throws Exception{	
+		return "caseModify";		
+	}		
+	
+	@RequestMapping(value="/caseWrite")
+	String caseWrite() throws Exception{	
+		return "caseWrite";		
+	}		
+	
+	
+	@RequestMapping(value="/customerList")
+	String customerList() throws Exception{	
+		return "customerList";		
+	}	
+		
+	
+	@RequestMapping(value="/customerModify")
+	String customerModify() throws Exception{	
+		return "customerModify";		
+	}		
+	
+	@RequestMapping(value="/customerWrite")
+	String customerWrite() throws Exception{	
+		return "customerWrite";		
+	}		
+	
+	@RequestMapping(value="/macrosList")
+	String macrosList() throws Exception{	
+		return "macrosList";		
+	}		
+	
+	
+	@RequestMapping(value="/statisticsList")
+	String statisticsList() throws Exception{	
+		return "statisticsList";		
+	}	
+	
+	
+	@RequestMapping(value="/accountWrite")
+	String accountWrite() throws Exception{	
+		return "accountWrite";		
+	}	
+	
+
+	@RequestMapping(value="/accountView")
+	String accountView() throws Exception{	
+		return "accountView";		
+	}		
+	
+	@RequestMapping(value="/accountModify")
+	String accountModify() throws Exception{	
+		return "accountModify";		
+	}
+	
+	@RequestMapping(value="/cardWrite")
+	String cardWrite() throws Exception{	
+		return "cardWrite";		
+	}
+	
+	@RequestMapping(value="/cardView")
+	String cardView() throws Exception{	
+		return "cardView";		
+	}	
+	
+	@RequestMapping(value="/cardModify")
+	String cardModify() throws Exception{	
+		return "cardModify";		
+	}		
+	
+	@RequestMapping(value="/login")
+	String login() throws Exception{	
+		return "login";		
+	}		
+	
+	@RequestMapping(value="/join")
+	String join() throws Exception{	
+		return "join";		
+	}	
+	
+	@RequestMapping(value="/findPwd")
+	String findPwd() throws Exception{	
+		return "findPwd";		
+	}		
+	
+	@RequestMapping(value="/resetPwd")
+	String resetPwd() throws Exception{	
+		return "resetPwd";		
+	}		
+	@RequestMapping(value="/getAllCaseList")
 	String getAllCaseList(@RequestParam Map param,ModelMap model) throws Exception{	
 		
 		logger.debug(param.toString());
