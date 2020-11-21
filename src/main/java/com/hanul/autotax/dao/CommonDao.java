@@ -17,6 +17,11 @@ public class CommonDao {
 	private SqlSessionTemplate sqlSession;
 	
 	
+	public Map getUserInfo(Map param) throws Exception{
+		Map user = null;
+		user = sqlSession.selectOne("com.hanul.autotax.dao.getUserInfo",param);				
+		return user;
+	}		
 	
 	public List<Map> getAllCaseList(Map param) throws Exception{
 		List<Map> cases = null;

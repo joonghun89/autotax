@@ -1,10 +1,14 @@
 package com.hanul.autotax.controller;
 
 import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
 import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -137,6 +141,23 @@ public class ViewController {
 	String test() throws Exception{	
 		return "test";		
 	}	
+	
+	@RequestMapping(value="/doLogin")
+	String doLogin(HttpServletRequest request, @RequestParam Map param,ModelMap model) throws Exception{	
+		
+		logger.debug(param.toString());
+		Map userInfo = commonDao.getUserInfo(param);
+		if(userInfo != null) {
+			model.put("userInfo", userInfo);
+			request.getSession().setAttribute("userInfo",userInfo);
+			return "test";				
+		}else {
+			return "dashboard";	
+		}
+	    
+	
+		
+	}		
 	
 	@RequestMapping(value="/getAllCaseList")
 	String getAllCaseList(@RequestParam Map param,ModelMap model) throws Exception{	
