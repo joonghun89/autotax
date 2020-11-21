@@ -17,7 +17,7 @@
 			        		<li ><a href="home">홈</a></li>
 			        		<li class="uk-disabled">사건부</li>
 			        	</ul>
-		        	</span>
+		        	</span>  
 	        	</div>
 		    </div>
     
