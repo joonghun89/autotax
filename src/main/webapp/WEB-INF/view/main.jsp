@@ -2,10 +2,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Insert title here</title>
+	
+	<link rel='stylesheet' type="text/css" href='../../css/uikit.min.css' />
 </head>
 <body>
-main
+	<div class="uk-placeholder">
+	main1
+	</div>
+	
+	
+	<script type="text/javascript" src="../../js/uikit.min.js"></script>
 </body>
 </html>
