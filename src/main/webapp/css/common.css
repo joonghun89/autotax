@@ -1,3 +1,302 @@
 @charset "utf-8";
 
-body {color: red;}
+ 
+@font-face { 
+    font-family: 'Noto Sans KR'; 
+    font-style: normal; 
+    font-weight: 100; 
+    src: url(../wfont/NotoSansKR-Thin.woff2) format('woff2'), 
+      url(../wfont/NotoSansKR-Thin.woff) format('woff'), 
+      url(../wfont/NotoSansKR-Thin.otf) format('opentype'); 
+} 
+@font-face { 
+    font-family: 'Noto Sans KR'; 
+    font-style: normal; 
+    font-weight: 300; 
+    src: url(../wfont/NotoSansKR-Light.woff2) format('woff2'), 
+      url(../wfont/NotoSansKR-Light.woff) format('woff'), 
+      url(../wfont/NotoSansKR-Light.otf) format('opentype'); 
+} 
+@font-face { 
+    font-family: 'Noto Sans KR'; 
+    font-style: normal; 
+    font-weight: 400; 
+    src: url(../wfont/NotoSansKR-Regular.woff2) format('woff2'), 
+        url(../wfont/NotoSansKR-Regular.woff) format('woff'), 
+        url(../wfont/NotoSansKR-Regular.otf) format('opentype'); 
+ } 
+@font-face { 
+    font-family: 'Noto Sans KR'; 
+    font-style: normal; 
+    font-weight: 500; 
+    src: url(../wfont/NotoSansKR-Medium.woff2) format('woff2'), 
+        url(../wfont/NotoSansKR-Medium.woff) format('woff'), 
+        url(../wfont/NotoSansKR-Medium.otf) format('opentype'); 
+ } 
+@font-face { 
+    font-family: 'Noto Sans KR'; 
+    font-style: normal; 
+    font-weight: 700; 
+    src: url(../wfont/NotoSansKR-Bold.woff2) format('woff2'), 
+        url(../wfont/NotoSansKR-Bold.woff) format('woff'), 
+        url(../wfont/NotoSansKR-Bold.otf) format('opentype'); 
+ } 
+@font-face { 
+    font-family: 'Noto Sans KR'; 
+    font-style: normal; 
+    font-weight: 900; 
+    src: url(../wfont/NotoSansKR-Black.woff2) format('woff2'), 
+        url(../wfont/NotoSansKR-Black.woff) format('woff'), 
+        url(../wfont/NotoSansKR-Black.otf) format('opentype'); 
+ }
+
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+/*
+--------------------
+uk-section	
+--------------------
+*/
+.uk-section {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+
+/*
+--------------------
+uk-container
+--------------------
+*/
+.uk-container {max-width: 1024px;}
+
+
+/*
+--------------------
+cont
+--------------------
+*/
+
+
+
+
+/*
+--------------------
+	uk-navbar
+--------------------
+*/
+ul.uk-navbar-nav>li>a {
+    color: #555;
+    font-size: 18px;
+}
+
+.adm ul.uk-navbar-nav>li>a {
+    color: #eee;
+}
+
+nav .dc_navbar ul.uk-navbar-nav>li {
+    margin: 0 10px 21px;
+}
+nav .dc_navbar ul.uk-navbar-nav>li>a {
+    font-size: 20px;
+}
+
+.uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle {
+    /*min-height: 87px;*/
+}
+   
+
+
+.dc-padding-bottom {padding-bottom: 2px !important;}
+
+
+/*
+--------------------
+	Page Title
+--------------------
+*/
+.page_tit {
+    padding-bottom: 2px !important;
+    margin-bottom: 5px;
+}
+
+
+/*
+--------------------
+	Content
+--------------------
+*/
+.cont {
+    min-height: 300px;
+}
+.cont .cont_tit {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.cont .cont_body {
+    margin-bottom: 80px;
+}
+
+.cont .v_cont_img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.cont .w_file_subj {
+    display: inline-block;
+    width: 180px;
+}
+
+.cont .file_input {
+    width: 380px;
+}
+
+
+
+/*
+ *------------------------------
+ * U I K I T - H E I G H T
+ *------------------------------
+*/
+.uk-height-small {}
+
+
+
+
+
+
+/*
+ *==============================
+ * L A Y O U T - cont
+ *==============================
+*/
+
+.dc-cont-block {
+    padding: 30px 40px 30px 20px;
+    min-height: 400px;
+}
+
+/*
+--------------------
+	h o t
+--------------------
+*/
+.dc-hot-style {
+    background-color: #333;
+}
+
+
+
+
+
+.gal_subj {text-align: center;}
+.no_img {background: #eee;}
+
+
+
+
+/*
+ *------------------------------
+ * V I S U A L
+ *------------------------------
+*/
+.dc-visual-h-large {min-height: 700px;}
+.dc-visual-h-medium {min-height: 400px;}
+.dc-visual-h-small {min-height: 200px;}
+
+
+
+/*
+ *------------------------------
+ * B O A R D
+ *------------------------------
+*/
+.cb_table {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #ebebeb;
+}
+.uk-placeholder .cb_table {
+    border-bottom: 0px solid #ebebeb;
+}
+.cb_table .cd1 { width: 60px; }
+.cb_table .cd2 { width: 70px; }
+.cb_table .cd3 { width: 80px; }
+.cb_table .cd4 { width: 90px; }
+.cb_table .cd5 { width: 100px; }
+.cb_table .cd6 { width: 110px; }
+.cb_table .cd7 { width: 120px; }
+.cb_table .cd8 { width: 130px; }
+
+
+
+
+
+#regForm .tit, #editForm .tit {font-size: 18px;}
+.usrModify .tit {font-size: 24px;}
+#regForm .uk-label-success, #editForm .uk-label-success, .usrModify .uk-label-success {
+    background-color: #a9a9a9;
+    color: #fff;
+}
+
+
+
+
+.home .uk-description-list>dt {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.home .uk-description-list>dd {
+    color: #eee;
+}
+
+.home_phone {color: #fefc78;}
+.uk-card .font_white {color: #ffffff; opacity: 1; font-size: 1.1rem;}
+.uk-card .font_gray {color: #999999; opacity: 1; font-size: 1rem; margin-top:10px;}
+.uk-link, a {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.account .uk-description-list>dt {
+    color: #999;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.account .uk-description-list>dd {
+    color: #666;
+}
+
+
+
+.bank .uk-card-secondary{
+    background: #aaa;
+    color: #fff;
+    text-shadow: none;
+}
+
+.bank .uk-description-list>dt {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.bank .uk-description-list>dd {
+    color: #eee;
+    font-size: 1.3rem;
+}
