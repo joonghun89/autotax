@@ -16,6 +16,14 @@ public class CommonDao {
 	@Autowired
 	private SqlSessionTemplate sqlSession;
 	
+	
+	
+	public List<Map> getAllCaseList(Map param) throws Exception{
+		List<Map> cases = null;
+		cases = sqlSession.selectList("com.hanul.autotax.dao.getAllCaseList",param);				
+		return cases;
+	}	
+	
 	@Transactional
 	public List getAllCustomer() throws Exception{
 		List userList = null;
