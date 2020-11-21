@@ -28,6 +28,11 @@ public class ViewController {
 		return "main";		
 	}	
 	
+	@RequestMapping(value="/dashboard")
+	String dashboard() throws Exception{	
+		return "dashboard";		
+	}	
+	
 	@RequestMapping(value="/caseList")
 	String caseList() throws Exception{	
 		return "caseList";		
@@ -127,6 +132,12 @@ public class ViewController {
 	String resetPwd() throws Exception{	
 		return "resetPwd";		
 	}		
+	
+	@RequestMapping(value="/test")
+	String test() throws Exception{	
+		return "test";		
+	}	
+	
 	@RequestMapping(value="/getAllCaseList")
 	String getAllCaseList(@RequestParam Map param,ModelMap model) throws Exception{	
 		
