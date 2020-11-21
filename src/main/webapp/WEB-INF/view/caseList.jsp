@@ -148,7 +148,7 @@
 				<div class="button_group">
 					<a href="caseWrite" class="uk-button uk-button-basic uk-align-left">사건등록 <img src="${pageContext.request.contextPath}/svg/plus-square.svg" class="svg"></a>
 					<button class="uk-button uk-button-macro uk-align-right">매크로 일괄실행 <img src="${pageContext.request.contextPath}/svg/macro.svg" class="svg"></button>
-				</div>
+				</div> 
 				
 			</div>
 
