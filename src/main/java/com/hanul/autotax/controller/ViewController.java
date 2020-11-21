@@ -40,6 +40,7 @@ public class ViewController {
 				
 	}	
 	
+	
 	@RequestMapping(value="/main")
 	String main() throws Exception{	
 		return "main";		
