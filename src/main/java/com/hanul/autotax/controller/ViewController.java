@@ -27,8 +27,21 @@ public class ViewController {
 	@Autowired
 	private CommonDao commonDao;
 	
+	/* 페이지 이동 시작 */
+	
+	@RequestMapping(value="/home")
+	String home(HttpServletRequest request) throws Exception{	
+		String id = request.getSession().getAttribute("id").toString();
+		if(id == null) {
+			return "login";
+		}else {
+			return "forward:dashboard";
+		}
+				
+	}	
+	
 	@RequestMapping(value="/main")
-	String goMain() throws Exception{	
+	String main() throws Exception{	
 		return "main";		
 	}	
 	
@@ -142,6 +155,11 @@ public class ViewController {
 		return "test";		
 	}	
 	
+	/* 페이지 이동 끝 */
+	
+	
+	/* 비즈로직 시작 */
+	
 	@RequestMapping(value="/doLogin")
 	String doLogin(HttpServletRequest request, @RequestParam Map param,ModelMap model) throws Exception{	
 		
@@ -150,13 +168,10 @@ public class ViewController {
 		if(userInfo != null) {
 			model.put("userInfo", userInfo);
 			request.getSession().setAttribute("userInfo",userInfo);
-			return "test";				
+			return "forward:getAllCaseList";				
 		}else {
 			return "dashboard";	
-		}
-	    
-	
-		
+		}	    			
 	}		
 	
 	@RequestMapping(value="/getAllCaseList")
